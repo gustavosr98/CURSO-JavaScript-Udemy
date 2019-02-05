@@ -8,7 +8,7 @@ let obj2 = {
     par2: 'chao'
 }
 
-let obj3 = obj1
+let obj3 = obj1 
 
 console.log('obj1 === obj2 (' + obj1 === obj2 +')' )
 console.log('obj1 === obj3 (' + obj1 === obj3 +')' )
