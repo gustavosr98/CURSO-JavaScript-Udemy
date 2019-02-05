@@ -21,8 +21,17 @@ const body = document.querySelector('body')
 body.appendChild(newP)
 
 //USER INTERACTION
+
+//BOTON
 let x = 0;
-document.querySelector('button').addEventListener('click', function(e){
+document.querySelector('#botonCrearNota').addEventListener('click', function(e){
     x = x + 1;
     e.target.textContent = 'Me has tocado ' + x + ' veces'
 })
+
+//SALGA EN CONSOLA LO QUE HA ESCRITO
+document.querySelector('#inputCrearNota').addEventListener('input', function(e){
+    console.log(e.target.value)
+})
+
+
