@@ -46,8 +46,6 @@ document.querySelector('#buscador').addEventListener('input', function(e){
 document.querySelector('#formulario1').addEventListener('submit', function(e) {
     e.preventDefault()
 
-    console.log(e.target.elements.titulo)
-
     const newTitulo = e.target.elements.titulo.value
     const newFecha = e.target.elements.fecha.value
     notes.push( { titulo: newTitulo, date: newFecha } )
