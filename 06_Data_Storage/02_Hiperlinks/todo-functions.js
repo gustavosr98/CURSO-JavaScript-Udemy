@@ -61,8 +61,9 @@ const renderTodos = function (todos, filters) {
 const generateTodoDOM = function (todo) {
     const todoEl = document.createElement('div')
     const checkbox = document.createElement('input')
-    const todoText = document.createElement('span')
+    const todoText = document.createElement('a')
     const removeButton = document.createElement('button')
+
 
     // Setup todo checkbox
     checkbox.setAttribute('type', 'checkbox')
@@ -76,6 +77,7 @@ const generateTodoDOM = function (todo) {
 
     // Setup the todo text
     todoText.textContent = todo.text
+    todoText.setAttribute('href', `/edit.html#${todo.id}`)
     todoEl.appendChild(todoText)
 
     // Setup the remove button
