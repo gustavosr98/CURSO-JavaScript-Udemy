@@ -1,0 +1,29 @@
+#todo {
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+}
+
+#instrucciones {
+    height: 200px;
+    border-color: darkblue;
+}
+
+#instrucciones:focus {
+    background-color: lightblue;
+}
+
+.ingrediente {
+    padding-top: 5px;
+    text-align: left;
+}
+
+span {
+    padding-left: 10px;
+}
+
+.removeI {
+    position: absolute;
+    right: 30%;
+}

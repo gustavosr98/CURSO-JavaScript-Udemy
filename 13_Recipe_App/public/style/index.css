@@ -1,0 +1,20 @@
+#todo {
+    margin-top: 10%;
+    margin-left: 30%;
+    margin-right: 30%;
+    text-align: center;
+}
+
+#search {
+    height: 200px;
+    border-color: darkblue;
+}
+
+#search:focus {
+    background-color: lightgray;
+}
+
+.recipe {
+    background-color: green; 
+    border-color: gray;
+}

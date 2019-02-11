@@ -20,7 +20,14 @@ module.exports = {
                     plugins: ['transform-object-rest-spread']
                 }
             }
-        }]
+        },
+        {
+            test: /\.css$/,
+            use: {
+                loader: 'css-loader'
+            }
+        }
+        ]
     },
     devServer: {
         contentBase: path.resolve(__dirname , 'public'),

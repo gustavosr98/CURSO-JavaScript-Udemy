@@ -1,8 +1,8 @@
 export default class Ingrediente {
-    constructor( _id, _nombre ){
+    constructor(_id, _nombre, _loTengo){
         this.id = _id,
         this.nombre = _nombre,
-        this.loTengo = false 
+        this.loTengo = _loTengo 
     }
     
     marcarTengo() {

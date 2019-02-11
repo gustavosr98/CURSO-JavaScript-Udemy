@@ -25,7 +25,7 @@ export default class Recipe {
 
     getIngredientesLeftCount(){
         let i = 0
-        this.ingredientes.forEach( (ingrediente) => i += ingrediente.loTengo )
+        this.ingredientes.forEach( (ingrediente) => i += !ingrediente.loTengo )
         return i
     }
 }
