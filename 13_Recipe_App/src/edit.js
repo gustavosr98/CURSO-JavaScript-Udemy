@@ -1,10 +1,16 @@
 import { getSavedRecipes, setSavedRecipes } from './requests.js'
 import { renderIngredientesDOM } from './dom_manipulation.js'
 import './../public/style/edit.css'
+import Recipe from './Recipe.js' 
 
 const recipes = getSavedRecipes()
 
-const recipe = recipes.find((item) => item.id === location.hash.substr(1) )
+let recipe = recipes.find((item) => item.id === location.hash.substr(1) )
+if (!recipe) {
+    recipe = new Recipe( location.hash.substr(1) , 'Inserte un Titulo', 'Escriba instrucciones...', [] )
+    recipes.push(recipe)
+    setSavedRecipes(recipes)
+}
 
 const recipeTitleDOM = document.querySelector('#titulo')
 recipeTitleDOM.value = recipe.titulo
@@ -20,4 +26,10 @@ recipeInstruccionesDOM.addEventListener('input', (e) => {
     setSavedRecipes(recipes)
 })
 
-renderIngredientesDOM(recipes, recipe)
+document.querySelector('#deleteRecipe').addEventListener('click', () => {
+    recipes.splice( recipes.indexOf(recipe), 1)
+    setSavedRecipes(recipes)
+    location.assign('./index.html')
+})
+
+renderIngredientesDOM(recipes, recipe) 

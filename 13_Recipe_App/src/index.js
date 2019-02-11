@@ -5,7 +5,7 @@ import './../public/style/index.css'
 
 const recipes = getSavedRecipes()
 
-document.querySelector('#search').addEventListener('input', () => {
+document.querySelector('#search').addEventListener('input', (e) => {
     renderRecipesDOM( recipes, e.target.value)
     
 })
@@ -14,4 +14,4 @@ document.querySelector('#addRecipe').addEventListener('click', () => {
     location.assign(`./edit.html#${uuidv4()}`)
 })
 
-renderRecipesDOM(recipes, '')
+renderRecipesDOM(recipes, '') 
