@@ -67,6 +67,11 @@ const renderIngredientesDOM = (recetas, receta) => {
             ingredienteDOM.appendChild(ingredienteS)
             ingredientesDIV.appendChild(ingredienteDOM)
 
+            ingredienteC.addEventListener('click', () => {
+                ingrediente.loTengo = !ingrediente.loTengo
+                setSavedRecipes(recetas)                
+            })
+
             ingredienteS.addEventListener('click', () => {
                 receta.ingredientes.splice( receta.ingredientes.findIndex( (item) => item.id === ingrediente.id) ,1 )
                 setSavedRecipes(recetas)
